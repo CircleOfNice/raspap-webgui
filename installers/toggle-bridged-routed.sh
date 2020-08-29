@@ -14,8 +14,8 @@ function do_bridged_mode() {
   sudo sed -i "s/^#\(.*#BRIDGED\)$/\1/" /etc/dhcpcd.conf
   sudo sed -i "s/^#\(bridge\)/\1/" /etc/hostapd/hostapd.conf
 
-  sudo ip link set down eth0
-  sudo ip link set up eth0
+  sudo ip link set down wwan0
+  sudo ip link set up wwan0
 
   sudo systemctl start systemd-networkd
   sudo systemctl enable systemd-networkd

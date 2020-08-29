@@ -332,7 +332,7 @@ function SaveHostAPDConfig($wpa_array, $enc_types, $modes, $interfaces, $status)
         $config[] = 'nohook lookup-hostname';
 
         if ($bridgedEnable == 1) {
-            $config[] = 'denyinterfaces eth0 wlan0';
+            $config[] = 'denyinterfaces wwan0 wlan0';
             $config[] = 'interface br0';
         } elseif ($wifiAPEnable == 1) {
             // Enable uap0 configuration in dhcpcd for Wifi client AP mode

@@ -65,8 +65,8 @@ if [ -r "$CONFIGFILE" ]; then
             systemctl stop systemd-networkd
 
             echo "Restarting eth0 interface..."
-            ip link set down eth0
-            ip link set up eth0
+            ip link set down wwan0
+            ip link set up wwan0
 
             echo "Removing uap0 interface..."
             iw dev uap0 del
